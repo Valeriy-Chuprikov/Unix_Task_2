@@ -73,6 +73,7 @@ then
 	exit 4
 fi
 
-echo `cut -d ':' -f 1,6 "$file" | grep -w "$user"":" | cut -d ':' -f 2`
+grep "^$user:" "$file" | cut -d: -f6
+#echo `cut -d ':' -f 1,6 "$file" | grep -w "$user"":" | cut -d ':' -f 2`
 exit 0
 
